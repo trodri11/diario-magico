@@ -94,6 +94,16 @@
                 opacity: 0;
             }
         }
+
+        /* Estilo da mensagem especial */
+        #special-message {
+            display: none;
+            margin-top: 20px;
+            background-color: #FFD700;
+            color: #003A66;
+            padding: 15px;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
@@ -150,7 +160,7 @@
 
         <button class="button" onclick="playSong()">🎶 Atualizando a nossa música! Jão - "Clarão"!</button>
         <div id="audio-container">
-            <iframe id="audio-player" src="https://www.youtube.com/watch?v=E-3NTWMFgp0"></iframe>
+            <iframe id="audio-player" width="100%" height="315" src="https://www.youtube.com/embed/N2GBGpkd76U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
 
         <button class="button" onclick="showSpecialMessage()">💌 Mensagem especial do mês! Clica aqui!</button>
@@ -166,7 +176,7 @@
     </section>
 
     <section>
-        <h3>⏳ Faltam...</h3>
+        <h3>⏳ Veremos o minas em:</h3>
         <div id="days-left" style="font-size: 28px; color: #FFD700; margin-bottom: 10px;"></div>
         <div id="countdown" style="font-size: 24px; color: #FFF;"></div>
         <div id="month-message" style="display:none; font-size: 22px; margin-top: 20px; background-color: #FFD700; color: #003A66; padding: 15px; border-radius: 10px;">
@@ -210,7 +220,6 @@
                     <td>Sesi Vôlei Bauru x Dentil Praia Clube</td>
                     <td>Rio de Janeiro</td>
                 </tr>
-                <tr>
             </tbody>
         </table>
     </section>
@@ -223,9 +232,15 @@
     <script>
         function showSpecialMessage() {
             const msg = document.getElementById("special-message");
-            msg.style.display = "block";
-            msg.classList.add("animate__fadeInUp");
-            confettiEffect();
+            
+            if (msg.style.display === "none") {
+                msg.style.display = "block";
+                msg.classList.add("animate__fadeInUp");
+                confettiEffect();
+            } else {
+                msg.style.display = "none";
+                msg.classList.remove("animate__fadeInUp");
+            }
         }
 
         function calculateDays() {
@@ -268,5 +283,4 @@
     </script>
 </body>
 </html>
-
 
