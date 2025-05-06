@@ -99,6 +99,30 @@
       line-height: 1.7;
       font-size: 18px;
     }
+
+    table {
+      margin: 20px auto;
+      border-collapse: collapse;
+      width: 80%;
+      background-color: #2a2b44;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #fff;
+    }
+
+    th {
+      background-color: #FFD700;
+      color: #003A66;
+    }
+
+    td {
+      color: #fff;
+    }
   </style>
 </head>
 <body>
@@ -147,12 +171,9 @@
       <p>Mas que ir tomar um café comigo depois de um dia difícil?</p>
     </div>
 
-    <button class="button" onclick="playSong()">🎶 Atualizamos a trilha sonora!</button>
-    <div id="audio-container">
-      <!-- YouTube -->
-     <iframe width="560" height="315" src="https://www.youtube.com/embed/31BeluA7dRE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-
+    <button class="button" onclick="playSong()">🎶 Atualizamos a trilha sonora! Tocar Jão - "Supernova"!</button>
+        <div id="audio-container">
+            <iframe id="audio-player" src="https://www.youtube.com/watch?v=31BeluA7dRE"></iframe>
 
       <!-- Spotify -->
       <div style="margin-top: 20px;">
@@ -162,7 +183,7 @@
 
     <button class="button" onclick="showSpecialMessage()">💌 Mensagem especial do mês</button>
     <div id="special-message" class="animate__animated" style="display:none;">
-      <p>Que venham mais capítulos! 🌈✨</p>
+      <p>Você é uma das pessoas mais fortes que já conheci, mesmo com tanta coisa pra dar conta, não tenha medo dos seus sonhos e continue lutando pelo que acredita.  🌈✨</p>
     </div>
 
     <button class="button" onclick="showLoveLetter()">💖 Uma carta só pra você</button>
@@ -179,6 +200,45 @@
         </p>
       </div>
     </div>
+
+    <!-- Tabela dos jogos da seleção brasileira de vôlei feminino em junho de 2025 -->
+    <h3>📅 Próximos Jogos da Seleção Brasileira de Vôlei Feminino - Junho 2025</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Competição</th>
+          <th>Oponente</th>
+          <th>Horário</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>04/06/2025</td>
+          <td>Liga das Nações</td>
+          <td> Repúblia Tcheca</td>
+          <td>17h30</td>
+        </tr>
+        <tr>
+          <td>05/06/2025</td>
+          <td>Liga das Nações</td>
+          <td>EUA</td>
+          <td>21h00</td>
+        </tr>
+        <tr>
+          <td>07/06/2025</td>
+          <td>Liga das Nações</td>
+          <td>Alemanha</td>
+          <td>13h30</td>
+        </tr>
+        <tr>
+          <td>08/06/2025</td>
+          <td>Liga das Nações</td>
+          <td>Italia</td>
+          <td>10h00</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 
   <footer>
@@ -208,5 +268,7 @@
   </script>
 </body>
 </html>
+
+
 
 
